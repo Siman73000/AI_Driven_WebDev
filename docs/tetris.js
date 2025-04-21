@@ -89,10 +89,14 @@ class Tetris {
         
         this.drawNextPiece();
         
+        // Check if the new piece can be placed at its starting position
         if (this.checkCollision()) {
             this.gameOver = true;
             alert('Game Over!');
+            return;
         }
+        
+        this.drawBoard();
     }
     
     drawNextPiece() {
